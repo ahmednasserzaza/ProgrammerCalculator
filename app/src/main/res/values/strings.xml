@@ -5,7 +5,7 @@
     <string name="number_to_convert">number to convert</string>
     <string name="entering_header">Enter binary Number</string>
     <string name="result_header">result Number</string>
-    <string name="result">Result</string>
+    <string name="result">Calculate</string>
     <string name="binary_hint">enter binary number</string>
     <string name="decimal_hint">enter decimal number</string>
     <string name="octal_hint">enter octal number</string>
