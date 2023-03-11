@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_verySmall">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="margin_giant">32dp</dimen>
+    <dimen name="edit_text_shape_radius">8dp</dimen>
+    <dimen name="stroke_width">1dp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="button_radius">8dp</dimen>
+</resources>

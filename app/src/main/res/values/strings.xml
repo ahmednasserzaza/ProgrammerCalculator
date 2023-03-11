@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ProgrammerCalculator</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="number_to_convert">number to convert</string>
+    <string name="entering_header">Enter binary Number</string>
+    <string name="result_header">result Number</string>
+    <string name="result">Result</string>
+    <string name="binary_hint">enter binary number</string>
+    <string name="decimal_hint">enter decimal number</string>
+    <string name="octal_hint">enter octal number</string>
+    <string name="hexadecimal_hint">enter hexadecimal number</string>
+    <string name="binary_header">Binary Number</string>
+    <string name="decimal_header">Decimal Number</string>
+    <string name="octal_header">Octal Number</string>
+    <string name="hexadecimal_header">Hexadecimal Number</string>
+    <string name="invalid">Invalid input</string>
+
+    <string-array name="number_systems">
+        <item>Binary</item>
+        <item>Decimal</item>
+        <item>Octal</item>
+        <item>Hexadecimal</item>
+    </string-array>
+</resources>
