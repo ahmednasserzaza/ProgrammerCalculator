@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
     private fun convert() {
         val input = binding.editTextEntering.text.toString().trim()
         val result = binding.textViewResult
+
         try {
             val from = binding.spinnerFrom.selectedItemPosition
             val to = binding.spinnerTo.selectedItemPosition
@@ -79,13 +80,12 @@ class MainActivity : AppCompatActivity() {
                     2 -> result.text = converter.binaryToOctal(input)
                     3 -> result.text = converter.binaryToHexadecimal(input)
                 }
-                1 ->
-                    when (to) {
-                        0 -> result.text = converter.decimalToBinary(input.toLong())
-                        1 -> result.text = input
-                        2 -> result.text = converter.decimalToOctal(input.toLong())
-                        3 -> result.text = converter.decimalToHexadecimal(input.toLong())
-                    }
+                1 -> when (to) {
+                    0 -> result.text = converter.decimalToBinary(input.toLong())
+                    1 -> result.text = input
+                    2 -> result.text = converter.decimalToOctal(input.toLong())
+                    3 -> result.text = converter.decimalToHexadecimal(input.toLong())
+                }
                 2 -> when (to) {
                     0 -> result.text = converter.octalToBinary(input)
                     1 -> result.text = converter.octalToDecimal(input).toString()
