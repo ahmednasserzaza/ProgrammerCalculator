@@ -11,4 +11,7 @@
     <color name="black_secondary">#CC121212</color>
     <color name="hint_color">#4D121212</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="text_hint">#B2FFFFFF</color>
+    <color name="color_green">#1F8A70</color>
+    <color name="btn_color">#22577A</color>
 </resources>

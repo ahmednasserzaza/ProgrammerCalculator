@@ -10,4 +10,5 @@
     <dimen name="text_size_medium">16sp</dimen>
     <dimen name="text_size_large">24sp</dimen>
     <dimen name="button_radius">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
 </resources>

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
+import com.bumptech.glide.Glide
 import com.fighter.programmercalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,11 +24,16 @@ class MainActivity : AppCompatActivity() {
         initSpinners()
         converter = Converter()
         binding.buttonGetResult.setOnClickListener {
+            binding.gifImage.setImageDrawable(null)
             convert()
         }
     }
 
     private fun initSpinners() {
+        val items = listOf("binary" , "decimal" , "octal" , "hexadecimal")
+        val adapterFrom = ArrayAdapter(this , android.R.layout.simple_spinner_dropdown_item, items)
+        adapterFrom.setDropDownViewResource(R.layout.spinner_item)
+        binding.spinnerFrom.adapter = adapterFrom
         binding.spinnerFrom.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -46,6 +52,9 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
+        val adapterTo = ArrayAdapter(this , android.R.layout.simple_spinner_dropdown_item, items)
+        adapterTo.setDropDownViewResource(R.layout.spinner_item)
+        binding.spinnerTo.adapter = adapterTo
         binding.spinnerTo.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -99,8 +108,10 @@ class MainActivity : AppCompatActivity() {
                     3 -> result.text = input
                 }
             }
+            Glide.with(this).asGif().load(R.raw.right).into(binding.gifImage)
         } catch (e: Exception) {
             result.text = getString(R.string.invalid)
+            Glide.with(this).asGif().load(R.raw.think).into(binding.gifImage)
         }
     }
 }
