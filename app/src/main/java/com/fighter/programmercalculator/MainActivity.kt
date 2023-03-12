@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initSpinners() {
-        val items = listOf("binary" , "decimal" , "octal" , "hexadecimal")
-        val adapterFrom = ArrayAdapter(this , android.R.layout.simple_spinner_dropdown_item, items)
+        val items = listOf("binary", "decimal", "octal", "hexadecimal")
+        val adapterFrom = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
         adapterFrom.setDropDownViewResource(R.layout.spinner_item)
         binding.spinnerFrom.adapter = adapterFrom
         binding.spinnerFrom.onItemSelectedListener = object : OnItemSelectedListener {
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
-        val adapterTo = ArrayAdapter(this , android.R.layout.simple_spinner_dropdown_item, items)
+        val adapterTo = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
         adapterTo.setDropDownViewResource(R.layout.spinner_item)
         binding.spinnerTo.adapter = adapterTo
         binding.spinnerTo.onItemSelectedListener = object : OnItemSelectedListener {
@@ -108,7 +108,9 @@ class MainActivity : AppCompatActivity() {
                     3 -> result.text = input
                 }
             }
-            Glide.with(this).asGif().load(R.raw.right).into(binding.gifImage)
+            if (input.isNotEmpty()){
+                Glide.with(this).asGif().load(R.raw.right).into(binding.gifImage)
+            }
         } catch (e: Exception) {
             result.text = getString(R.string.invalid)
             Glide.with(this).asGif().load(R.raw.think).into(binding.gifImage)
